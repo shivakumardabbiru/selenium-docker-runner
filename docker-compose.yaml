@@ -28,18 +28,6 @@ services:
       - TESTSUITEFILE=searchtesting.xml
     volumes:
       - ./search-results1:/usr/share/udemy/test-output
-  searchtesting2:
-    image: sdabbiru/selenium-docker
-    depends_on:
-      - chrome
-      - firefox
-    environment:
-      - HUB_HOST=hub
-      - BROWSER=firefox
-      - TESTSUITEFILE=searchtesting.xml
-    volumes:
-      - ./search-results2:/usr/share/udemy/test-output    
-
   bookflight1:
     image: sdabbiru/selenium-docker
     depends_on:
@@ -51,17 +39,7 @@ services:
       - TESTSUITEFILE=bookflight.xml
     volumes:
       - ./book-results1:/usr/share/udemy/test-output
-  bookflight2:
-    image: sdabbiru/selenium-docker
-    depends_on:
-      - chrome
-      - firefox
-    environment:
-      - HUB_HOST=hub
-      - BROWSER=firefox
-      - TESTSUITEFILE=bookflight.xml
-    volumes:
-      - ./book-results2:/usr/share/udemy/test-output  
+
 
 
 
