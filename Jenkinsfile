@@ -1,6 +1,11 @@
 pipeline{
 	agent any
 	stages{
+	  stage("Pull latest Image") {
+	  	steps{
+	  		bat "docker pull shiva439/selenium-docker"
+	  	}
+	  }
 	  stage("start hub"){
 	     steps{
 	          bat "docker-compose up -d hub chrome firefox"
