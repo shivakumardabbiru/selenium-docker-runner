@@ -4,6 +4,7 @@ services:
     image: selenium/hub:3.14
   chrome:
     image: selenium/node-chrome:3.14
+    shm_size: '1gb'
     depends_on:
       - hub
     environment:
