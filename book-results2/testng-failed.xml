@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [book-flight-suite]" parallel="tests">
+  <test thread-count="5" name="book-flight-test2(failed)" parallel="tests">
+    <parameter name="expectedprice" value="$1150 USD"/>
+    <parameter name="noofpass" value="3"/>
+    <classes>
+      <class name="com.flightbook.test.BookFlight">
+        <methods>
+          <include name="selectflightPageTest"/>
+          <include name="quitdriver"/>
+          <include name="RegistrationPageTest"/>
+          <include name="RegistrationConfirmPageTest"/>
+          <include name="quitbrowser"/>
+          <include name="setupParameters"/>
+          <include name="FlightDetailsPageTest"/>
+          <include name="FlightConfirmPageTest"/>
+          <include name="setDriver"/>
+        </methods>
+      </class> <!-- com.flightbook.test.BookFlight -->
+    </classes>
+  </test> <!-- book-flight-test2(failed) -->
+  <test thread-count="5" name="book-flight-test4(failed)" parallel="tests">
+    <parameter name="expectedprice" value="$4500 USD"/>
+    <parameter name="noofpass" value="5"/>
+    <classes>
+      <class name="com.flightbook.test.BookFlight">
+        <methods>
+          <include name="selectflightPageTest"/>
+          <include name="quitdriver"/>
+          <include name="RegistrationPageTest"/>
+          <include name="RegistrationConfirmPageTest"/>
+          <include name="quitbrowser"/>
+          <include name="setupParameters"/>
+          <include name="FlightDetailsPageTest"/>
+          <include name="FlightConfirmPageTest"/>
+          <include name="setDriver"/>
+        </methods>
+      </class> <!-- com.flightbook.test.BookFlight -->
+    </classes>
+  </test> <!-- book-flight-test4(failed) -->
+  <test thread-count="5" name="book-flight-test3(failed)" parallel="tests">
+    <parameter name="expectedprice" value="$2240 USD"/>
+    <parameter name="noofpass" value="4"/>
+    <classes>
+      <class name="com.flightbook.test.BookFlight">
+        <methods>
+          <include name="selectflightPageTest"/>
+          <include name="quitdriver"/>
+          <include name="RegistrationPageTest"/>
+          <include name="RegistrationConfirmPageTest"/>
+          <include name="quitbrowser"/>
+          <include name="setupParameters"/>
+          <include name="FlightDetailsPageTest"/>
+          <include name="FlightConfirmPageTest"/>
+          <include name="setDriver"/>
+        </methods>
+      </class> <!-- com.flightbook.test.BookFlight -->
+    </classes>
+  </test> <!-- book-flight-test3(failed) -->
+</suite> <!-- Failed suite [book-flight-suite] -->

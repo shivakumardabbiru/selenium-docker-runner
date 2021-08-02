@@ -1,10 +1,15 @@
 pipeline{
 	agent any
 	stages{
-	  stage("run test"){
+	  stage("start hub"){
 	     steps{
-	          bat "docker-compose up"
+	          bat "docker-compose up -d hub chrome firefox"
 	     }
+	  }
+	  stage("Run Test"){
+	  	steps{
+	  		bat "docker-compose up searchtesting1 bookflight1"
+	  	}
 	  }
       stage("Bring hub down"){
          steps{
