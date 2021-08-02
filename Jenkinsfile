@@ -11,11 +11,11 @@ pipeline{
 	  		bat "docker-compose up searchtesting1 bookflight1"
 	  	}
 	  }
-     post{
-     	 always{
+	}
+    post{
+     always{
      	 	archiveartefacts artefacts: 'output/**'
      	 	bat "docker-compose down"
      	 }
      }
-	}
 }
