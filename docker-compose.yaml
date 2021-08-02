@@ -2,8 +2,6 @@ version: "3"
 services:
   hub:
     image: selenium/hub:3.14
-    ports:
-      - "4444:4444"
   chrome:
     image: selenium/node-chrome:3.14
     depends_on:
@@ -27,7 +25,7 @@ services:
       - BROWSER=chrome
       - TESTSUITEFILE=searchtesting.xml
     volumes:
-      - ./search-results1:/usr/share/udemy/test-output
+      - ./output/search-results1:/usr/share/udemy/test-output
   bookflight1:
     image: shiva439/selenium-docker
     depends_on:
@@ -38,7 +36,7 @@ services:
       - BROWSER=chrome
       - TESTSUITEFILE=bookflight.xml
     volumes:
-      - ./book-results1:/usr/share/udemy/test-output
+      - ./output/book-results1:/usr/share/udemy/test-output
 
 
 
